@@ -46,13 +46,13 @@ public:
     {
         std::vector<int> v;
 
-        int t = 0;
+        int y = 0;
         for (int i = 0; i < this->num.size(); i++)
         {
             v.push_back((this->num[i] * mul + t) % 10);
-            t = (this->num[i] * mul + t) / 10;
+            y = (this->num[i] * mul + y) / 10;
         }
-        if (t != 0)
+        if (y != 0)
             v.push_back(t);
 
         Simpleop x(v);
